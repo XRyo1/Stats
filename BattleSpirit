@@ -1,7 +1,7 @@
 local battlespiritEnabled = false
 local healthEnabled = false
 
-game:GetService("UserInputService").InputBegan:Connect(function(inpu, gameProcessedEvent)
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
     if not gameProcessedEvent then
         if input.KeyCode == Enum.KeyCode.B then
             battlespiritEnabled = not battlespiritEnabled
