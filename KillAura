@@ -1,0 +1,10 @@
+getgenv().instakill = true
+
+while instakill do task.wait()
+    for i,v in pairs(game:GetService("Workspace").Live:GetChildren()) do
+        if v.Name ~= game.Players.LocalPlayer.Name and isnetworkowner(v.PrimaryPart) then
+            v.Humanoid.Health = 0
+            v.Head:Destroy()
+        end
+        end
+    end
