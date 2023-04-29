@@ -1,0 +1,32 @@
+local healthEnabled = false
+local agilityEnabled = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent then
+        if input.KeyCode == Enum.KeyCode.H then
+            healthEnabled = not healthEnabled
+        elseif input.KeyCode == Enum.KeyCode.F then
+            strengthEnabled = not strengthEnabled
+        
+        end
+    end
+end)
+
+while true do
+    if healthEnabled then
+        local health = "Vigor"
+        local strlocate = game:GetService("Workspace").TrainingGrounds.EndPoints.Boulder.EndPart.CFrame
+        local humanoid = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local args = {
+            [1] = {
+                ["Type"] = "End",
+                ["Npc"] = workspace:WaitForChild("Npcs"):WaitForChild("Jin"),
+                ["Path"] = health
+            }
+        }
+        humanoid.CFrame = strlocate
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Dialogue"):FireServer(unpack(args))
+    end
+    
+    wait(.1) -- Wait for 5 seconds before starting the next iteration
+end
