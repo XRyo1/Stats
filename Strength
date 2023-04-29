@@ -6,7 +6,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(input, gameProce
             strengthEnabled = not strengthEnabled
         elseif input.KeyCode == Enum.KeyCode.G then
             agilityEnabled = not agilityEnabled
-     end
+       end
+    end
 end)
 
 while true do
