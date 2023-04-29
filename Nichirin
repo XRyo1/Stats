@@ -6,4 +6,4 @@ local args = {
     }
 }
 
-game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args)
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
