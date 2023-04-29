@@ -1,4 +1,5 @@
 local strengthEnabled = false
+local agilityEnabled = false
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
     if not gameProcessedEvent then
