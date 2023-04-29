@@ -11,4 +11,4 @@ local args = {
 game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
 
 wait(.1) -- Wait for 5 seconds before starting the next iteration
-en
+end
