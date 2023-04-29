@@ -4,7 +4,7 @@ local agilityEnabled = false
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
     if not gameProcessedEvent then
-        if input.KeyCode == Enum.KeyCode.S then
+        if input.KeyCode == Enum.KeyCode.1 then
             strengthEnabled = not strengthEnabled
         elseif input.KeyCode == Enum.KeyCode.G then
             agilityEnabled = not agilityEnabled
