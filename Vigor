@@ -1,15 +1,10 @@
 local healthEnabled = false
-local agilityEnabled = false
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
     if not gameProcessedEvent then
         if input.KeyCode == Enum.KeyCode.N then
             healthEnabled = not healthEnabled
-        elseif input.KeyCode == Enum.KeyCode.F then
-            strengthEnabled = not strengthEnabled
-        
-        end
-    end
+     end
 end)
 
 while true do
