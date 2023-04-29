@@ -1,0 +1,9 @@
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Jack,
+        ["Path"] = "DPath4"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
