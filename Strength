@@ -1,18 +1,4 @@
-local strengthEnabled = false
-local agilityEnabled = false
-
-game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
-    if not gameProcessedEvent then
-        if input.KeyCode == Enum.KeyCode.S then
-            strengthEnabled = not strengthEnabled
-        elseif input.KeyCode == Enum.KeyCode.G then
-            agilityEnabled = not agilityEnabled
-       end
-    end
-end)
-
-while true do
-    if strengthEnabled then
+if strengthEnabled then
         local strength = "Strength"
         local strlocate = game:GetService("Workspace").TrainingGrounds.EndPoints.Boulder.EndPart.CFrame
         local humanoid = game.Players.LocalPlayer.Character.HumanoidRootPart
