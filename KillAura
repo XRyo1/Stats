@@ -7,4 +7,4 @@ while instakill do task.wait()
             v.Head:Destroy()
         end
         end
-    end
+    en
