@@ -1,0 +1,34 @@
+local strengthEnabled = false
+local battlespiritEnabled = false
+local agilityEnabled = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent then
+        if input.KeyCode == Enum.KeyCode.F then
+            strengthEnabled = not strengthEnabled
+        elseif input.KeyCode == Enum.KeyCode.G then
+            agilityEnabled = not agilityEnabled
+        elseif input.KeyCode == Enum.KeyCode.B then
+            battlespiritEnabled = not battlespiritEnabled
+        end
+    end
+end)
+
+while true do
+    if agilityEnabled then
+        local agility = "Agility"
+        local speedlocate = game:GetService("Workspace").TrainingGrounds.EndPoints.Agility.EndPart.CFrame
+        local humanoid = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local args = {
+            [1] = {
+                ["Type"] = "End",
+                ["Npc"] = workspace:WaitForChild("Npcs"):WaitForChild("Jin"),
+                ["Path"] = agility
+            }
+        }
+        humanoid.CFrame = speedlocate
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Dialogue"):FireServer(unpack(args))
+    end
+    
+    wait(.1) -- Wait for 5 seconds before starting the next iteration
+end
