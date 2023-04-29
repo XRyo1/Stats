@@ -1,4 +1,4 @@
-getgenv().gourd = true
+getgenv().gourd = false
 
 while gourd do task.wait()
     for i, Gourd in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
