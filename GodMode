@@ -1,1 +1,1 @@
-game:GetService("Players").LocalPlayer.Character.Effects.Attackers:Destroy(
+game:GetService("Players").LocalPlayer.Character.Effects.Attackers:Destroy()
