@@ -1,0 +1,4 @@
+local ohNumber1 = 1
+local ohString2 = "Z"
+
+game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Settings.Set:InvokeServer(ohNumber1, ohString2)
