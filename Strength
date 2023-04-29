@@ -1,5 +1,4 @@
-if strengthEnabled then
-        local strength = "Strength"
+local strength = "Strength"
         local strlocate = game:GetService("Workspace").TrainingGrounds.EndPoints.Boulder.EndPart.CFrame
         local humanoid = game.Players.LocalPlayer.Character.HumanoidRootPart
         local args = {
