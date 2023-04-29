@@ -1,5 +1,4 @@
 local strengthEnabled = false
-local battlespiritEnabled = false
 local agilityEnabled = false
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
@@ -8,8 +7,6 @@ game:GetService("UserInputService").InputBegan:Connect(function(input, gameProce
             strengthEnabled = not strengthEnabled
         elseif input.KeyCode == Enum.KeyCode.G then
             agilityEnabled = not agilityEnabled
-        elseif input.KeyCode == Enum.KeyCode.B then
-            battlespiritEnabled = not battlespiritEnabled
         end
     end
 end)
