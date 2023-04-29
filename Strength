@@ -1,4 +1,4 @@
-    local strength = "Strength"
+local strength = "Strength"
     local health = "Vigor"
     local battlespirit = "Spar"
     local agility = "Agility"
