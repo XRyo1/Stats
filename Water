@@ -1,0 +1,53 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+
+for i = 1, 2 do
+   ReplicatedStorage.Events.Dialogue:FireServer({
+       Type = "End",
+       Npc = Workspace.Npcs.Seiya,
+       Path = "Path4"
+   })
+   task.wait(1)
+
+   ReplicatedStorage.Events.Dialogue:FireServer({
+       Type = "End",
+       Npc = Workspace.Npcs.Fakumi,
+       Path = "DPath5"
+   })
+   task.wait(1)
+
+   ReplicatedStorage.Events.Dialogue:FireServer({
+       Type = "End",
+       Npc = Workspace.Npcs.Hirohito,
+       Path = "DPath5"
+   })
+   task.wait(1)
+
+   ReplicatedStorage.Events.Dialogue:FireServer({
+       Type = "End",
+       Npc = Workspace.Npcs.Yori,
+       Path = "DPath5"
+   })
+   task.wait(1)
+
+   ReplicatedStorage.Events.Dialogue:FireServer({
+       Type = "End",
+       Npc = Workspace.Npcs.Seiya,
+       Path = "GPath3"
+   })
+
+   task.wait(5)
+end
+
+ReplicatedStorage.Events.Dialogue:FireServer({
+   Type = "Continue",
+   Npc = Workspace.Npcs.Seiya,
+   Path = "FPath5"
+})
+task.wait(0.5)
+
+ReplicatedStorage.Events.Dialogue:FireServer({
+   Type = "End",
+   Npc = Workspace.Npcs.Seiya,
+   Path = "RepTab"
+})
