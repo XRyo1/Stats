@@ -1,0 +1,14 @@
+for i = 1, do
+
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs:FindFirstChild("Aika Roshu"),
+        ["Path"] = "SQuest4"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+
+wait(.1) -- Wait for 5 seconds before starting the next iteration
+end
