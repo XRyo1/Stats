@@ -1,0 +1,7 @@
+local v1 = {
+   ["Type"] = "End",
+   ["Npc"] = game:GetService("Workspace").Npcs["Machigai Tenshi"],
+   ["Path"] = "DPath7"
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(v1)
