@@ -1,0 +1,11 @@
+getgenv().gourd = false
+
+while gourd do task.wait()
+    for i, Gourd in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if Gourd:IsA("Tool") and string.find(Gourd.Name, "Gourd") then
+            game:GetService("Players").LocalPlayer.Character.Scripts.Local.Breathe:FireServer(true)
+            task.wait()
+            Gourd:Activate()
+        end
+    end
+end
