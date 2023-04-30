@@ -197,7 +197,7 @@ local Button = BreathingTab:CreateButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Flame"))()
    end,
 })
-local Label = BreathingTab:CreateLabel("Rejoin game after getting the breathing")
+local Label = BreathingTab:CreateLabel("Rejoin game after finishing the last quest and getting the breathing")
 local Button = BreathingTab:CreateButton({
    Name = "Wind Breathing",
    Callback = function()
