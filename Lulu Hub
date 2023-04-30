@@ -1,0 +1,267 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+-- Main
+local Window = Rayfield:CreateWindow({
+    Name = "Lulu Hub",
+    LoadingTitle = "Lulu Hub",
+    LoadingSubtitle = "by Abyss",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = Wisteria, -- Create a custom folder for your hub/game
+       FileName = "Wisteria"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Lulu Hub",
+       Subtitle = "Key System",
+       FileName = "Lulu Hub Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Key"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+ -- Tabs
+ local SlotTab = Window:CreateTab("MainMenu Slots", 4483362458) -- Title, Image
+ local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
+ local StatTab = Window:CreateTab("Stats", 4483362458) -- Title, Image
+ local InventoryTab = Window:CreateTab("Inventory", 4483362458) -- Title, Image
+ local BreathingTab = Window:CreateTab("Breathing", 4483362458) -- Title, Image
+ local TeleportTab = Window:CreateTab("Teleport", 4483362458) -- Title, Image
+ local OtherHubTab = Window:CreateTab("Other Hubs", 4483362458) -- Title, Image
+ local SettingTab = Window:CreateTab("Settings", 4483362458) -- Title, Image
+
+
+
+ -- Button
+ local Button = SlotTab:CreateButton({
+   Name = "Slot 2",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot2"))()
+   end,
+})
+local Button = SlotTab:CreateButton({
+   Name = "Slot 3",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot3"))()
+   end,
+})
+local Button = SlotTab:CreateButton({
+   Name = "Slot 4",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot4"))()
+   end,
+})
+local Button = SlotTab:CreateButton({
+   Name = "Slot 5",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot5"))()
+   end,
+})
+local Label = StatTab:CreateLabel("Press F to Enable")
+local Button = StatTab:CreateButton({
+   Name = "Auto Strength",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Strength"))()
+   end,
+})
+local Label = StatTab:CreateLabel("Press G to Enable")
+local Button = StatTab:CreateButton({
+   Name = "Auto Agility",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Agility"))()
+   end,
+})
+local Label = StatTab:CreateLabel("Press B to Enable")
+local Button = StatTab:CreateButton({
+   Name = "Auto BattleSpirit",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/BattleSpirit"))()
+   end,
+})
+local Label = StatTab:CreateLabel("Press N to Enable")
+local Button = StatTab:CreateButton({
+   Name = "Auto Vigor",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Vigor"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Inf Money/Exp",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Inf%20Money"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Kill Aura",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/KillAura"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "God Mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/GodMode"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Anti Sun",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Sunlight"))()
+   end,
+})
+local Label = PlayerTab:CreateLabel("Auto Gourd")
+local Button = PlayerTab:CreateButton({
+   Name = "ON",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Gourd"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "OFF",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/OffGOURD"))()
+   end,
+})
+local Label = PlayerTab:CreateLabel("Inf Spins")
+local Button = PlayerTab:CreateButton({
+   Name = "Unsave",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/UnSave"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Save",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Save"))()
+   end,
+})
+local Label = PlayerTab:CreateLabel("Clan Perks")
+local Button = PlayerTab:CreateButton({
+   Name = "Enhanced Smelling",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Smelling"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Enhanced Hearing",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Hearing"))()
+   end,
+})
+local Button = InventoryTab:CreateButton({
+   Name = "Inf Perfect Stone",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Perfect"))()
+   end,
+})
+local Button = InventoryTab:CreateButton({
+   Name = "Replace Nichirin(Broken)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Nichirin"))()
+   end,
+})
+local Button = InventoryTab:CreateButton({
+   Name = "Replace Demon Type",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Demon%20Type"))()
+   end,
+})
+local Button = TeleportTab:CreateButton({
+   Name = "Final Selection",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Final"))()
+   end,
+})
+local Button = TeleportTab:CreateButton({
+   Name = "Prison of Demons",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Prison"))()
+   end,
+})
+local Button = BreathingTab:CreateButton({
+   Name = "Water Breathing",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Water"))()
+   end,
+})
+local Label = BreathingTab:CreateLabel("Rejoin game after getting the breathing")
+local Button = BreathingTab:CreateButton({
+   Name = "Flame Breathing",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Flame"))()
+   end,
+})
+local Label = BreathingTab:CreateLabel("Rejoin game after getting the breathing")
+local Button = BreathingTab:CreateButton({
+   Name = "Wind Breathing",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Wind"))()
+   end,
+})
+local Label = BreathingTab:CreateLabel("Rejoin game after getting the breathing")
+local Button = BreathingTab:CreateButton({
+   Name = "Thunder Breathing",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Thunder"))()
+   end,
+})
+local Label = BreathingTab:CreateLabel("Rejoin game after getting the breathing")
+local Button = OtherHubTab:CreateButton({
+   Name = "Muz Hub",
+   Callback = function()
+      token='Keys';
+loadstring(game:HttpGet('https://gamefraud.lol/muz/modules/api.lua'))()
+   end,
+})
+local Button = OtherHubTab:CreateButton({
+   Name = "Kaido Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d9bb0a3e40029b6b3697dcc245de2d3.lua"))()
+   end,
+})
+local Button = SettingTab:CreateButton({
+   Name = "Data Loss",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Data%20Loss"))()
+   end,
+})
+local Button = SettingTab:CreateButton({
+   Name = "Data Save",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Data%20Save"))()
+   end,
+})
+local Label = SettingTab:CreateLabel("Server")
+local Button = SettingTab:CreateButton({
+   Name = "Serverhop",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Server%20Hopper"))()
+   end,
+})
+local Button = SettingTab:CreateButton({
+   Name = "Lowest Serverhop",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Lowest%20Server"))()
+   end,
+})
+local Button = SettingTab:CreateButton({
+   Name = "Rejoin Server",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Rejoin-Game/main/Rejoin%20Game.lua"))()
+   end,
+})
+local Button = SettingTab:CreateButton({
+   Name = "Destroy GUI",
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
+
+
+Rayfield:LoadConfiguration()
