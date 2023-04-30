@@ -1,0 +1,5 @@
+local slot = 5
+local id = game.Players.LocalPlayer.UserId
+local v1 = id.."_Slot "..slot
+game:GetService("ReplicatedStorage").Events.SaveKey:InvokeServer(v1)
+game:GetService("ReplicatedStorage").Events.Teleport:FireServer(0, "")
