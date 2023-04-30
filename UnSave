@@ -1,0 +1,14 @@
+--[[ Wisteria 2 Inf Spins
+1. Execute the script
+2. Roll anything you want
+
+3.1 If you dont get what you want rejoin
+3.2 If you do get what you want follow the other steps below
+
+4. turn "getgenv().revert = false" into "getgenv().false = true"
+5. Re-Execute (Now if you rejoin you shouldnt loose it if you did it right)
+]]
+
+getgenv().revert = false
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/Wisteria_2_InfSpins.lua"))()
