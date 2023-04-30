@@ -1,0 +1,82 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService");
+local UserInputService = game:GetService("UserInputService")
+local CollectionService = game:GetService("CollectionService");
+local LocalPlayer = game.Players.LocalPlayer;
+local LocalCharacter = LocalPlayer.Character;
+local Char2 = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait();
+local HumanoidRootPart = Char2:WaitForChild("HumanoidRootPart");
+
+local toggle = false;
+local hearingEnable = true;
+
+local ray = RaycastParams.new();
+ray.FilterType = Enum.RaycastFilterType.Whitelist;
+ray.FilterDescendantsInstances = { workspace.Map };
+local tweenInfo = TweenInfo.new(0.65, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut);
+
+function ToggleHearing()
+    if hearingEnable then
+         task.spawn(function()
+              while true do
+                   if hearingEnable then
+
+                   else
+                        break;
+                   end;
+                   if "Right" == "Left" then
+                        local LR = "Right";
+                   else
+                        local LR = "Left";
+                   end;
+                   local v81, v82, v83 = pairs(workspace.Live:GetChildren());
+                   while true do
+                        local v84, targetPlayer = v81(v82, v83);
+                        if v84 then
+
+                        else
+                             break;
+                        end;
+                        v83 = v84;
+                        if targetPlayer ~= LocalCharacter then
+                             if targetPlayer:FindFirstChild("HumanoidRootPart") then
+                                  if (targetPlayer.HumanoidRootPart.Position - HumanoidRootPart.Position).Magnitude <= 400 then
+                                       if 1 < targetPlayer.HumanoidRootPart.Velocity.Magnitude then
+                                            if 5 < targetPlayer.Humanoid.Health then
+                                                 if targetPlayer:FindFirstChild("Right Leg") then
+                                                      local rightLegRay = workspace:Raycast(targetPlayer["Right Leg"].Position, Vector3.new(0, -3, 0), ray);
+                                                      if rightLegRay then
+                                                           local EchoClone = ReplicatedStorage.Assets.EchoStep:Clone();
+                                                           EchoClone.CFrame = CFrame.lookAt(rightLegRay.Position, rightLegRay.Normal + rightLegRay.Position) * CFrame.Angles(1.5707963267948966, 0, 0);
+                                                           EchoClone.Parent = workspace.Debris;
+                                                           TweenService:Create(EchoClone.Box, tweenInfo, {
+                                                                Transparency = 1,
+                                                                Size = EchoClone.Size * 2.25
+                                                           }):Play();
+                                                           game.Debris:AddItem(EchoClone, 0.65);
+                                                      end;
+                                                 end;
+                                            end;
+                                       end;
+                                  end;
+                             end;
+                        end;
+                   end;
+                   task.wait(0.35);
+              end;
+         end);
+    end;
+end;
+
+ToggleHearing();
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == Enum.KeyCode.B and not toggle then
+         toggle = true;
+         hearingEnable = not hearingEnable;
+         ToggleHearing();
+         task.delay(0.5, function()
+              toggle = false;
+         end);
+    end;
+end)
