@@ -1,6 +1,6 @@
 getgenv().farm = true
 
-while farm do task.wait(0.1)
+while farm do task.wait()
 game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
         ["Type"] = "End",
         ["Npc"] = workspace.Npcs.Mita,
