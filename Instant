@@ -1,0 +1,9 @@
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs:FindFirstChild("Akihito")
+        ["Path"] = "SQuest4"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
