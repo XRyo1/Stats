@@ -1,18 +1,4 @@
-
-if getgenv().farm = true then
-
-while farm do task.wait(0.00001)
-game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
-        ["Type"] = "End",
-        ["Npc"] = workspace.Npcs.Mita,
-        ["Path"] = "Accept"
-    })
-game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
-        ["Type"] = "End",
-        ["Npc"] = workspace.Npcs:FindFirstChild("Saru Kenshi"),
-        ["Path"] = "SetSpawn"
-    })
-elseif getgenv().farm = false then
+getgenv().farm = true
 
 while farm do task.wait(0.00001)
 game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
