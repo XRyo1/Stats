@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
     LoadingTitle = "Lulu Hub",
     LoadingSubtitle = "by Abyss",
     ConfigurationSaving = {
-       Enabled = true,
+       Enabled = false,
        FolderName = Wisteria, -- Create a custom folder for your hub/game
        FileName = "Wisteria"
     },
@@ -17,17 +17,16 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Lulu Hub",
+       Title = "Kaisei Hub",
        Subtitle = "Key System",
        FileName = "Lulu Hub Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = {"Key"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+       Key = {"Uteria"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
  })
 
  -- Tabs
- local SlotTab = Window:CreateTab("MainMenu Slots", 4483362458) -- Title, Image
  local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
  local StatTab = Window:CreateTab("Stats", 4483362458) -- Title, Image
  local InventoryTab = Window:CreateTab("Inventory", 4483362458) -- Title, Image
@@ -39,30 +38,6 @@ local Window = Rayfield:CreateWindow({
 
 
  -- Button
- local Button = SlotTab:CreateButton({
-   Name = "Slot 2",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot2"))()
-   end,
-})
-local Button = SlotTab:CreateButton({
-   Name = "Slot 3",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot3"))()
-   end,
-})
-local Button = SlotTab:CreateButton({
-   Name = "Slot 4",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot4"))()
-   end,
-})
-local Button = SlotTab:CreateButton({
-   Name = "Slot 5",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Slot5"))()
-   end,
-})
 local Label = StatTab:CreateLabel("Press F to Enable")
 local Button = StatTab:CreateButton({
    Name = "Auto Strength",
@@ -158,12 +133,6 @@ local Button = InventoryTab:CreateButton({
    Name = "Inf Perfect Stone",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Perfect"))()
-   end,
-})
-local Button = InventoryTab:CreateButton({
-   Name = "Replace Nichirin(Broken)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/XRyo1/Stats/main/Nichirin"))()
    end,
 })
 local Button = InventoryTab:CreateButton({
